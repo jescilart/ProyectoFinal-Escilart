@@ -1,0 +1,32 @@
+
+/*GALERIA INICIO*/
+
+.gallery{
+    display: flex;
+    width: 90%;
+    height: 430px;
+  }
+  
+  section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit:cover;
+    opacity: .8;
+    
+  
+  }
+  
+  
+  .navbar-brand img {
+    width: 10%;
+    height: auto;
+  }
+  
+  .imagenContenedor img{
+    width: 10%;
+    height: 10%;
+  }
+  
+  footer{
+    margin-top: 2%;
+  }

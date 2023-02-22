@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propiedades</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.min.js"></script>
+
+
+</head>
+<body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="../img/favicon-logo.png"  class="d-inline-block align-top" > Inmobilien
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link" href="../sites/simuladores.html"> Simulador de Gastos </a>
+              <a class="nav-link" href="../sites/propiedades.html"> Propiedades </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+        </header>
+
+        <main>
+
+        <div class="container">
+          <img src="../img/city.gif">
+          <h1> Propiedades disponibles </h1>
+        </div>
+
+        <div class= "container-fluid" class="contenedorFiltros">
+          <form id="filtros">
+            <div>
+              <input type="radio" id="alquiler" name="filtro" value="alquiler">
+              <label for="alquiler">Alquiler</label>
+            </div>
+            <div>
+              <input type="radio" id="venta" name="filtro" value="venta">
+              <label for="centa">Venta</label>
+            </div>
+            <div>
+              <input type="radio" id="todo" name="filtro" value="todo" checked>
+              <label for="all">Todo</label>
+            </div>
+          </form>
+        </div>
+        
+        <div class="imagenContenedor" class="container-fluid">
+        <div class="container" class="imagenContenedor" id="contenedor-propiedades">
+        </div>
+        </div>
+
+
+        <footer class="bg-dark">
+          <div class="container-fluid">
+            <p class="text-end text-white bg-dark">
+              <strong> INMOBILIEN S.A.</strong><br>
+                  Av. Planas 4512, Tu ciudad, Argentina<br>
+                  Whatsapp: 155-555 555 <br>
+                  Tel: 444-4444 <br>
+                  Horario: Lunes a Viernes - 9:00 a 17:00 hs<br>
+            </p>
+          </div>
+        </footer>
+        
+        
+        
+            <script src="../js/script.js"></script> 
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+          </body>
+</html>
