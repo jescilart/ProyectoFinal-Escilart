@@ -1,4 +1,4 @@
-//FUNCIONES CALCULADORAS DE COMISIÓN, SELLADO Y GASTOS DE INGRESO
+//FUNCIONES - CALCULADORAS DE COMISIÓN, SELLADO Y GASTOS DE INGRESO
 
 function calculadoraComision() {
     let montoAlquiler = document.getElementById("montoAlquiler").value;
@@ -115,14 +115,12 @@ function calculadoraTotal() {
     }
 }
 
-
-//PARA ACTIVAR LAS 3 FUNCIONES A LA VEZ
+//FUNCION PARA ACTIVAR LAS 3 FUNCIONES A LA VEZ
 function calculadoras(){
     calculadoraComision();
     calculadoraSellado();
     calculadoraTotal();
 }
-
 
 
 //CONSULTOR DE PROPIEDADES
@@ -135,52 +133,50 @@ function Propiedad(direccion, tipo, precio, imagen) {
     this.precio = precio;
     this.imagen = imagen;
     
-  }
-  
+}
+
 
 //ARRAY PROPIEDADES
-  let propiedades = [
+let propiedades = [
     new Propiedad("Alem 725", "Alquiler", "$50.000", "../img/gallery/1.jpg"),
     new Propiedad("Rioja 145", "Venta", "U$D 125.000", "../img/gallery/2.jpg"),
     new Propiedad("Perú 1234", "Venta", "U$D 112.000", "../img/gallery/3.jpg"),
     new Propiedad("San Martin 124", "Alquiler", "$ 85.000", "../img/gallery/4.jpg"),
-  ];
-  
+];
 
-  //PARA QUE APAREZCAN LAS PROPIEDADES EN EL SITIO
 
-  let contenedorPropiedades = document.getElementById("contenedor-propiedades");
+//PARA QUE APAREZCAN LAS PROPIEDADES EN EL SITIO
+
+let contenedorPropiedades = document.getElementById("contenedor-propiedades");
   
-  
-  for (let i = 0; i < propiedades.length; i++) {
+for (let i = 0; i < propiedades.length; i++) {
     let propiedad = propiedades[i];
-  
+
     let propiedadObjeto = document.createElement("div");
     propiedadObjeto.classList.add("propiedad");
     propiedadObjeto.classList.add("border");
     propiedadObjeto.classList.add("border-dark");
-  
+
     let nombrePropiedad = document.createElement("h3");
     nombrePropiedad.textContent = propiedad.direccion;
-  
+
     let descripcionPropiedad = document.createElement("p");
     descripcionPropiedad.textContent = propiedad.tipo;
 
     let precioPropiedad = document.createElement("p");
     precioPropiedad.textContent = propiedad.precio;
-  
+
     let imagenPropiedad = document.createElement("img");
     imagenPropiedad.src = propiedad.imagen;
     imagenPropiedad.alt = propiedad.direccion;
-  
+
     let botonPropiedad = document.createElement("button");
     botonPropiedad.textContent = "Consultar";
     botonPropiedad.classList.add("btn-primary");
     
-    //SWEET ALERT
-
-    botonPropiedad.addEventListener("click", function() {
-        console.log("El botón fue presionado");
+    //SWEET ALERT - Framework
+botonPropiedad.addEventListener("click", function() {
+    console.log("El botón fue presionado");
         const swalInput = document.createElement("input");
         swalInput.type = "text";
         swalInput.placeholder = "Nombre completo";
@@ -226,30 +222,30 @@ function Propiedad(direccion, tipo, precio, imagen) {
           }
         });
       });
-  
+
     propiedadObjeto.appendChild(nombrePropiedad);
     propiedadObjeto.appendChild(descripcionPropiedad);
     propiedadObjeto.appendChild(precioPropiedad);
     propiedadObjeto.appendChild(imagenPropiedad);
     propiedadObjeto.appendChild(botonPropiedad);
-  
+
     contenedorPropiedades.appendChild(propiedadObjeto);
   }
 
 
   //PARA CONVERTIR LAS PROPIEDADES A JSON Y ALMACENARLO EN EL LOCALSTORAGE
 
-  const enJSON = JSON.stringify(propiedades)
-  console.log(enJSON)
-  localStorage.setItem("propiedades", enJSON);
-  
-  //FILTRO PROPIEDADES
+const enJSON = JSON.stringify(propiedades)
+console.log(enJSON)
+localStorage.setItem("propiedades", enJSON);
+
+//FILTRO PROPIEDADES
 
 
-  //EN PROCESO.......
+//EN PROCESO.......
 
 
-  // USO DE LOCALSTORAGE PARA ALMACENAR EL NOMBRE DEL USUARIO Y MOSTRARLO EN EL DOM
+// USO DE LOCALSTORAGE PARA ALMACENAR EL NOMBRE DEL USUARIO Y MOSTRARLO EN EL DOM
 
 function guardarNombre() {
 	const nombre = document.getElementById('inputNombre').value;
